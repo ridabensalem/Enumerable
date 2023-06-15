@@ -1,4 +1,4 @@
-require_relative 'My_class'
+require_relative 'my_class'
 module MyEnumerable
   def all?(&block)
     @list.all?(&block)
@@ -9,6 +9,6 @@ module MyEnumerable
   end
 
   def filter
-    @list.select { |num| num.even? }
+    @list.select(&:even?)
   end
 end
